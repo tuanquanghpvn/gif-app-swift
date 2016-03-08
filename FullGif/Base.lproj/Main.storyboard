@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aZE-Xa-vLt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FullGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Funny GIF Entertainment" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="q0Z-Ei-PPT">
+                                <rect key="frame" x="92" y="626" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="OFy-ew-aJF">
+                                <rect key="frame" x="67" y="239" width="240" height="189"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="exh-Fp-kNd"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="onp-Gb-eTP" kind="show" identifier="showListGIF" id="PtN-Nr-qRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546.5" y="408.5"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="a2V-nk-ip4">
+            <objects>
+                <tableViewController id="onp-Gb-eTP" customClass="DataTableViewController" customModule="FullGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="370" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pgs-EJ-3RN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="370" id="D2q-oi-kTk" customClass="TableViewCell" customModule="FullGif" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114" width="375" height="370"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D2q-oi-kTk" id="z0C-tM-vGh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rs-kA-CrI">
+                                            <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IM5-NV-f32">
+                                            <rect key="frame" x="8" y="37" width="359" height="267"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gif" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Ol-ECE">
+                                            <rect key="frame" x="154" y="138" width="66" height="66"/>
+                                            <gestureRecognizers/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gm-jB-3iu">
+                                            <rect key="frame" x="335" y="312" width="32" height="32"/>
+                                            <state key="normal" image="share-48"/>
+                                            <connections>
+                                                <action selector="share:" destination="D2q-oi-kTk" eventType="touchUpInside" id="Dab-B9-l32"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7f-Z5-TTv">
+                                            <rect key="frame" x="17" y="312" width="32" height="32"/>
+                                            <state key="normal" image="Like-50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrF-XC-Tgy">
+                                            <rect key="frame" x="74" y="312" width="32" height="32"/>
+                                            <state key="normal" image="Dislike-50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOS-5g-Kyx">
+                                            <rect key="frame" x="133" y="313" width="29" height="29"/>
+                                            <state key="normal" image="Quote-50"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btnComment" destination="iOS-5g-Kyx" id="yJy-eI-Kj8"/>
+                                    <outlet property="btnDislike" destination="mrF-XC-Tgy" id="RiV-hF-8Mg"/>
+                                    <outlet property="btnLike" destination="z7f-Z5-TTv" id="a3K-RO-CB2"/>
+                                    <outlet property="btnShare" destination="2gm-jB-3iu" id="Ygu-Mq-imh"/>
+                                    <outlet property="imgGif" destination="IM5-NV-f32" id="rvT-dX-dLo"/>
+                                    <outlet property="lblName" destination="7Rs-kA-CrI" id="hoA-gI-UfI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="onp-Gb-eTP" id="2Hn-gp-vct"/>
+                            <outlet property="delegate" destination="onp-Gb-eTP" id="WcR-t4-Bp7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="hqm-hw-mfp"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="c2z-cT-ray" kind="show" id="utd-am-Je4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tt-rx-x0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WW9-QV-LWb"/>
+            </objects>
+            <point key="canvasLocation" x="2062.5" y="408.5"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="aJi-0V-zBm">
+            <objects>
+                <viewController id="c2z-cT-ray" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qlv-v3-GI1"/>
+                        <viewControllerLayoutGuide type="bottom" id="cK2-C6-9mG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKK-MI-A0D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="wi7-jv-GzQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBn-fL-UcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2546.5" y="408.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3su-Oe-dj7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aZE-Xa-vLt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2EF-Gu-opu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WKf-yi-B9Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mn1-En-0JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048.5" y="408.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dislike-50" width="50" height="50"/>
+        <image name="Like-50" width="50" height="50"/>
+        <image name="Quote-50" width="50" height="50"/>
+        <image name="gif" width="144" height="144"/>
+        <image name="icon" width="512" height="512"/>
+        <image name="share-48" width="48" height="48"/>
+    </resources>
+</document>
