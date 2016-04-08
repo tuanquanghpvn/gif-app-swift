@@ -11,13 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     
     var array: [AnyObject]!
+    var currentURL: String = "http://bideox.com/post"
     
     func getData() {
         do {
-            let url: NSURL = NSURL(string: "http://bideox.com/post")!
+            let url: NSURL = NSURL(string: currentURL)!
             let data: NSData = NSData(contentsOfURL: url)!
             
             let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            
+            if let nextPage = jsonData["next"] as? String {
+                currentURL = nextPage
+            }
             
             if let results = jsonData["results"] as? [[String: AnyObject]] {
                 // if we get "blogs" from the JSON
@@ -34,8 +39,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
         getData()
         self.performSegueWithIdentifier("showListGIF", sender: nil)
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showListGIF" {
             let controller = segue.destinationViewController as! DataTableViewController
+            controller.currentURL = self.currentURL
             controller.array = self.array
         }
     }

@@ -20,6 +20,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var btnDislike: UIButton!
     @IBOutlet weak var btnComment: UIButton!
     @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnDetail: UIButton!
     
     weak var delegate: TableViewCellDelegate?
     
